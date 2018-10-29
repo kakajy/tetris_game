@@ -9,7 +9,7 @@ from PyQt5.QtGui import QPainter, QColor
 from tetris_model import BOARD_DATA, Shape
 from tetris_ai import TETRIS_AI
 
-# TETRIS_AI = None
+#TETRIS_AI = None
 
 class Tetris(QMainWindow):
     def __init__(self):
@@ -23,7 +23,10 @@ class Tetris(QMainWindow):
 
     def initUI(self):
         self.gridSize = 22
-        self.speed = 10
+        if(TETRIS_AI==None):
+            self.speed = 1000
+        else:
+            self.speed=100
 
         self.timer = QBasicTimer()
         self.setFocusPolicy(Qt.StrongFocus)
@@ -219,6 +222,11 @@ class Board(QFrame):
 
 if __name__ == '__main__':
     # random.seed(32)
+    global choice
+    choice=input('自己玩?(y/n)\n')
+    if(choice=="y" or choice=="Y"):
+        global TETRIS_AI
+        TETRIS_AI=None
     app = QApplication([])
     tetris = Tetris()
     sys.exit(app.exec_())
