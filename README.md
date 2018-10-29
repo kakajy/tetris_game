@@ -46,9 +46,14 @@ Just like classical Tetris Game. You use *up* key to rotate a shape, *left* key 
 
 ![Screenshot](doc/pics/screenshot_01.png)
 
+
+
 -----打包成exe文件-----
+
 1.安装pyinstaller 
-	pip install pyinstaller
+    pip install pyinstaller
+
+
 2.cmd中d:python\Scripts\pyinstaller.exe -F c:\Users\jsyl\Desktop\tetris_game-master\tetris_game.py
-	pyinstaller地址 -w -F 项目地址
-	(-w隐藏命令行提示窗口，-F打包成.exe文件，存放在dist文件夹中)
+    pyinstaller地址 -w -F 项目地址
+    (-w隐藏命令行提示窗口，-F打包成.exe文件，存放在dist文件夹中)
