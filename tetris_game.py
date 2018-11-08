@@ -225,6 +225,9 @@ class Board(QFrame):
 if __name__ == '__main__':
     # random.seed(32)
     global choice
+    print("-------操作说明-------")
+    print("↑:旋转\n↓:下降\n←:左\n→:右\nSpace:沉底")
+    print("----------------------")
     choice=input('自己玩?(y/n)\n')
     if(choice=="y" or choice=="Y"):
         global TETRIS_AI
